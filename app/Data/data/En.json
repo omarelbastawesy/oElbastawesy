@@ -82,7 +82,7 @@
     "send": "Send Message",
     "nameError": "Name must be at least 3 characters.",
     "emailError": "Please enter a valid email address.",
-    "phoneError": "Phone number is required & valid."
+    "phoneError": "Phone number is required (numbers only)."
   },
   "footer": {
     "heads": {
