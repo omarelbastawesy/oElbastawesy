@@ -25,7 +25,14 @@ export default function Hero() {
         <div className={styles.container}>
           <div className={styles.imgcon}>
             <div className={styles.heroImage}>
-              <Image alt="Hero Image" height={250} width={250} src={image} className={styles.image} />
+              <Image
+                alt="Hero Image"
+                height={240}
+                width={240}
+                src={image}
+                className={styles.image}
+                priority
+              />
             </div>
           </div>
           <div className={styles.data}>
@@ -40,7 +47,7 @@ export default function Hero() {
               className={styles.link}
               target="blank"
               href="https://www.facebook.com/omar.elbastawesy.2025"
-               aria-label="facbook account"
+              aria-label="facbook account"
             >
               <FontAwesomeIcon icon={faFacebookF} />
             </Link>
@@ -48,7 +55,7 @@ export default function Hero() {
               className={styles.link}
               target="blank"
               href="https://www.instagram.com/omarelbastawese/"
-               aria-label="instagram account"
+              aria-label="instagram account"
             >
               <FontAwesomeIcon icon={faInstagram} />
             </Link>
@@ -56,7 +63,7 @@ export default function Hero() {
               className={styles.link}
               target="blank"
               href="https://www.linkedin.com/in/omar-elbastawesy/"
-               aria-label="linkedin account"
+              aria-label="linkedin account"
             >
               <FontAwesomeIcon icon={faLinkedinIn} />
             </Link>
@@ -64,7 +71,7 @@ export default function Hero() {
               className={styles.link}
               target="blank"
               href="https://github.com/omarelbastawesy"
-               aria-label="github account"
+              aria-label="github account"
             >
               <FontAwesomeIcon icon={faGithubAlt} />
             </Link>
@@ -72,7 +79,7 @@ export default function Hero() {
               href="https://wa.me/201090336526"
               className={styles.link}
               target="blank"
-               aria-label="whatsapp account"
+              aria-label="whatsapp account"
             >
               <FontAwesomeIcon icon={faWhatsapp} />
             </Link>
@@ -82,7 +89,7 @@ export default function Hero() {
               href="/cv.pdf"
               download
               className={styles.download}
-               aria-label="download CV"
+              aria-label="download CV"
               dir={lang === "en" ? "ltr" : "rtl"}
             >
               {t.hero.dcv}
@@ -91,7 +98,7 @@ export default function Hero() {
               href="/cv.pdf"
               target="_blank"
               className={styles.view}
-               aria-label="view CV"
+              aria-label="view CV"
               dir={lang === "en" ? "ltr" : "rtl"}
             >
               {t.hero.vcv}

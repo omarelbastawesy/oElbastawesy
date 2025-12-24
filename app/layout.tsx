@@ -5,6 +5,12 @@ import "./globals.css";
 import AOSProvider from "./AOSProvider";
 import Scroll from "./components/Scroll/Scroll";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,13 +36,13 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased ${inter.className}`}
       >
         <AOSProvider>
           <LangProvider>
             <main>
               {children}
-              <Scroll  />
+              <Scroll />
             </main>
           </LangProvider>
         </AOSProvider>
