@@ -1,0 +1,73 @@
+.navbar {
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.logo {
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.7rem;
+  height: 60px;
+  width: fit-content;
+  padding: 1rem 0;
+}
+
+.item {
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+  height: fit-content;
+  padding: 0px 7px;
+  border: solid 1px var(--bg-secondary);
+  border-radius: var(--br-radius);
+}
+
+.burgerMenu {
+  display: none !important;
+  cursor: pointer;
+}
+.icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (max-width: 560px) {
+  .burgerMenu {
+    display: block !important;
+  }
+
+  
+  .navItems {
+    position: absolute;
+    flex-direction: column;
+    height: 0px;
+    top: 55px;
+    width: 100%;
+    background: var(--bg-secondary);
+    padding: 0 0;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .open {
+    height: 230px;
+    padding-bottom: 5px;
+    border-radius: 0 0 var(--br-radius ) var(--br-radius);
+  }
+}

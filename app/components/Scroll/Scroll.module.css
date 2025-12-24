@@ -1,0 +1,49 @@
+.btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--hi-color);
+  color: white;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  z-index: 9999;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hide {
+  opacity: 0;
+  transform: translateY(-10px) scale(0.9);
+  pointer-events: none;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.btn svg {
+  top: 0px;
+  position: relative;
+  animation: move 0.8s ease-in-out infinite;
+}
+
+.btn:hover path {
+  filter: drop-shadow(0 0 5px #00f7ff) drop-shadow(0 0 10px #00f7ff)
+    drop-shadow(0 0 20px #00f7ff) drop-shadow(0 0 40px #00c6ff);
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(4px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(4px);
+  }
+}

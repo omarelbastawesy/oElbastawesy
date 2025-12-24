@@ -1,0 +1,211 @@
+.about {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.head {
+  max-width: 450px;
+  text-align: center;
+  background: var(--gradiant);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.summary {
+}
+
+.header {
+  width: fit-content;
+  text-align: center;
+  padding: 0rem 1rem 0 2.6rem;
+  border: white 1px solid;
+  border-radius: 0.4rem;
+  background-color: var(--hi-color-bg);
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.summary .info {
+  padding: 1rem 0 1rem 1rem;
+  line-height: 2.5rem;
+}
+.header:hover {
+  text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff, 0 0 20px #00f7ff,
+    0 0 40px #00f7ff;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #00f7ff;
+  border-radius: 50%;
+  top: 50%;
+  left: 1.3rem;
+  transform: translate(-5px, -5px);
+  box-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff, 0 0 20px #00f7ff,
+    0 0 40px #00c6ff;
+}
+
+.experiance {
+  align-self: self-start;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.step {
+  padding: 1rem 0 1rem 1rem;
+  position: relative;
+}
+
+.step::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--black);
+  left: 0;
+  bottom: 0;
+}
+.step::before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  background: #00f7ff;
+  border-radius: 50%;
+  bottom: 0%;
+  left: 0;
+  transform: translate(-50%, 50%);
+  box-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff, 0 0 20px #00f7ff,
+    0 0 40px #00c6ff;
+  z-index: 1;
+  transition: 0.3s;
+  animation: move 4s ease-in-out infinite;
+}
+
+/* Keyframes */
+@keyframes move {
+  0% {
+    left: 0%;
+  }
+  50% {
+    left: 100%;
+  }
+}
+.name {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.name h4 {
+  background: linear-gradient(325deg, rgb(255, 38, 0), rgb(9, 156, 214));
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  width: fit-content;
+  transition: 2s;
+  position: relative;
+}
+
+.name h4::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background: var(--gradiant);
+  height: 2px;
+  transition: 0.3s;
+}
+
+.name h4:hover::after {
+  width: 100%;
+}
+
+.overView {
+  align-self: self-start;
+  width: 100%;
+  padding: 0 0 64px 0;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1rem 0 1rem;
+  width: 100%;
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  flex-direction: column;
+  min-width: 280px;
+  flex: auto;
+}
+.card .icon {
+  padding-bottom: 5px;
+}
+
+.card h3 {
+  font-size: var(--fs-h2);
+}
+
+.card h4 {
+  font-size: var(--fs-h3);
+}
+
+@media (max-width: 580px) {
+  .head {
+    font-size: var(--fs-h3);
+  }
+  .header {
+    font-size: var(--fs-h4);
+    margin: 0;
+  }
+
+  .info {
+    padding: 0.5rem 0 !important;
+    line-height: 1.5rem !important;
+    font-size: var(--fs-sm);
+  }
+
+  .step {
+    padding: 0.5rem 0;
+  }
+  .name {
+    margin-top: 1rem;
+    flex-direction: column;
+    line-height: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .name h4,
+  .name p {
+    font-size: var(--fs-lead);
+  }
+  .step .dis {
+    font-size: var(--fs-sm);
+    line-height: 1.3rem;
+  }
+
+  .step h4 a {
+    display: block;
+    min-height: 21px;
+  }
+
+  .step::before {
+    animation: move 2s ease-in-out infinite;
+  }
+}

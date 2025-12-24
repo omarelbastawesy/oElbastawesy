@@ -1,26 +1,201 @@
-@import "tailwindcss";
+/* =========================================================
+   GLOBAL DESIGN SYSTEM
+   Frontend Web Developer Portfolio
+   Light & Dark Theme
+   ========================================================= */
 
+/* -----------------------------
+   ROOT VARIABLES (LIGHT THEME)
+   ----------------------------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ========= Brand Colors ========= */
+  --primary: #020024; /* Main brand color (Indigo) */
+  --primary-soft: #eef2ff; /* Soft background for badges & code */
+  --hi-color: #0077ff;
+  --hi-color-h: rgba(0, 119, 255, 0.795);
+  --primary-soft-h: #eef2ffb7; /* Main brand color (Indigo) */
+  --hi-color-bg: #0077ff25;
+
+  /* ========= Backgrounds ========= */
+  --bg: #ffffff; /* Main background */
+  --bg-secondary: #ebebeb; /* Section background */
+  --card-bg: #fff3f3; /* Cards */
+  --card-bg-h: #fad4d4; /* Cards */
+  --nav-height: 76px;
+
+  /* ========= Text Colors ========= */
+  --text-main: #0f172a; /* Headings & main text */
+  --text-muted: #64748b; /* Paragraphs & secondary text */
+  --white: #eef2ff;
+  --black: #020024;
+  --gradiant: linear-gradient(315deg, var(--primary), var(--hi-color));
+  --gradiant-h: linear-gradient(325deg, rgb(255, 38, 0), rgb(9, 156, 214));
+
+  /* ========= UI Elements ========= */
+  --border: #e2e8f0; /* Borders & dividers */
+  --br-radius: 0.3rem;
+  --shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); /* Cards shadow */
+
+  /* ========= Typography ========= */
+  --font-main: "Inter", system-ui, sans-serif; /* Body text */
+  --font-heading: "Poppins", "Inter", sans-serif; /* Headings */
+  --font-mono: "Fira Code", monospace; /* Code blocks */
+
+  /* ========= Font Sizes ========= */
+  --fs-xs: 0.75rem; /* 12px */
+  --fs-sm: 0.9rem; /* 14px */
+  --fs-base: 1.2rem; /* 16px (default) */
+  --fs-lead: 1.125rem; /* Intro / lead text */
+
+  --fs-h1: clamp(2rem, 4vw, 2.3rem);
+  --fs-h2: clamp(2rem, 4vw, 2rem);
+  --fs-h3: clamp(1.5rem, 3vw, 1.6rem);
+  --fs-h4: 1.25rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* -----------------------------
+   DARK THEME OVERRIDES
+   ----------------------------- */
+[data-theme="dark"] {
+  --primary: #ffffff;
+
+  --bg: #020617; /* Dark background (not pure black) */
+  --bg-secondary: #000622;
+  --card-bg: #040a27;
+  --card-bg-h: #1e2238;
+
+  --text-main: #f8fafc; /* Main text */
+  --text-muted: #94a3b8; /* Muted text */
+
+  --border: #1e293b; /* Dark borders */
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+
+  --white: #020024;
+  --black: #eef2ff;
+  --hi-color-bg: #d1d1d125;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* =========================================================
+   GLOBAL STYLES
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+
+html {
+  font-size: 16px; /* Base font size */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: var(--fs-base);
+  line-height: 1.7;
+  background-color: var(--bg);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
 }
+
+#tsparticles canvas {
+  display: block !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0 !important;
+}
+
+/* -----------------------------
+   HEADINGS
+   ----------------------------- */
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+h4 {
+  font-size: var(--fs-h4);
+}
+
+/* -----------------------------
+   TEXT & LINKS
+   ----------------------------- */
+p {
+  margin: 0;
+  font-size: var(--fs-base);
+  color: var(--text-muted);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* -----------------------------
+   CARDS
+   ----------------------------- */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.card:hover {
+  background-color: var(--card-bg-h);
+}
+
+/* -----------------------------
+   CODE & BADGES
+   ----------------------------- */
+code {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  background-color: var(--primary-soft);
+  padding: 0.25rem 0.4rem;
+  border-radius: 6px;
+}
+
+/* -----------------------------
+   BUTTON (Optional)
+   ----------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--white);
+  text-transform: uppercase;
+  background-color: var(--primary);
+  border-radius: var(--br-radius);
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.75;
+}
+
+/* =========================================================
+   END OF GLOBAL FILE
+   ========================================================= */

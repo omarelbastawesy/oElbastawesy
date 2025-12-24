@@ -1,0 +1,138 @@
+.contact {
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.head {
+  font-size: var(--fs-h3);
+  text-align: center;
+  background: var(--gradiant);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  max-width: 670px;
+}
+
+.form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-direction: column;
+  width: 100%;
+}
+
+.data {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.dis {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  flex: 1;
+  min-width: 280px;
+  position: relative;
+}
+
+.tag {
+  padding: 0 1rem 0 0;
+}
+
+.input {
+  width: 100%;
+  height: 3rem;
+  border-radius: var(--br-radius);
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  color: var(--black);
+  font-size: var(--fs-h4);
+  padding: 0 1rem;
+  position: relative;
+}
+.input:hover,
+.msg:hover {
+  outline: solid 1px var(--hi-color-h);
+}
+.input:focus,
+.msg:focus {
+  outline: solid 2px var(--hi-color);
+  background-color: var(--card-bg-h);
+}
+.input:focus::placeholder,
+.msg:focus::placeholder {
+  color: transparent;
+}
+
+.error {
+  height: 0px;
+  overflow: hidden;
+  font-size: var(--fs-sm);
+  color: red;
+  padding: 0 0.6rem 0;
+  transition: 1s;
+}
+
+.massage {
+  width: 100%;
+}
+.msg {
+  height: 20rem;
+  width: 100%;
+  min-height: 3rem;
+  resize: vertical;
+  border-radius: var(--br-radius);
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  color: var(--black);
+  font-size: var(--fs-h4);
+  padding: 1rem;
+  position: relative;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: var(--fs-h4);
+  border-radius: var(--br-radius);
+  border: var(--border);
+  background-color: var(--hi-color);
+  color: var(--black);
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--hi-color-h);
+}
+
+.success {
+  position: fixed;
+  bottom: 100px;
+  max-width: 280px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: var(--br-radius);
+  padding: 1.5rem 1rem 1rem;
+  right: -280px;
+}
+.success .x {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  top: 0.75rem;
+  right: 1rem;
+  transform: translate(35%, -25%);
+}

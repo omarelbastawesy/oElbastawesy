@@ -1,0 +1,58 @@
+.footer {
+}
+
+.container {
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 3rem 0;
+}
+
+.follow {
+}
+
+.sections {
+}
+
+.links {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.links a {
+  color: var(--black);
+  position: relative;
+}
+.links a:hover {
+  color: var(--hi-color);
+  position: relative;
+}
+.links a::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: var(--hi-color);
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.links a:hover::after {
+  width: 100%;
+}
+
+.bottom  {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
+}
