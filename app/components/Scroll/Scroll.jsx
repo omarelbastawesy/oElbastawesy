@@ -1,6 +1,5 @@
 "use client";
 
-import styles from "./Scroll.module.css";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faJetFighterUp } from "@fortawesome/free-solid-svg-icons";
@@ -41,9 +40,12 @@ export default function ScrollToTop() {
     <button
       onClick={scrollToTop}
       aria-label="Scroll to top"
-      className={`${styles.btn} ${visible ? styles.show : styles.hide}`}
+      className={`group fixed right-7.5 bottom-7.5 z-200 h-11.25 w-11.25 cursor-pointer rounded-full border-0 bg-[var(--hi-color)] text-white shadow-[var(--shadow)] transition-all duration-300 ease-in-out ${visible ? "translate-y-0 scale-100 opacity-100" : "-translate-y-2.5 scale-90 opacity-0"}`}
     >
-      <FontAwesomeIcon icon={faJetFighterUp} />
+      <FontAwesomeIcon
+        className="relative animate-[move_0.8s_ease-in-out_infinite] [&_path]:transition-[filter] [&_path]:duration-300 group-hover:[&_path]:[filter:drop-shadow(0_0_5px_#00f7ff)_drop-shadow(0_0_10px_#00f7ff)_drop-shadow(0_0_20px_#00f7ff)_drop-shadow(0_0_40px_#00c6ff)]"
+        icon={faJetFighterUp}
+      />
     </button>
   );
 }

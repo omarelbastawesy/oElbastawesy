@@ -4,6 +4,9 @@
    Light & Dark Theme
    ========================================================= */
 
+/* import tailwind  */
+@import "tailwindcss";
+
 /* -----------------------------
    ROOT VARIABLES (LIGHT THEME)
    ----------------------------- */
@@ -195,6 +198,20 @@ code {
 
 .btn:hover {
   opacity: 0.75;
+}
+
+/* Animation / */
+
+@keyframes move {
+  0% {
+    transform: translateY(4px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(4px);
+  }
 }
 
 /* =========================================================

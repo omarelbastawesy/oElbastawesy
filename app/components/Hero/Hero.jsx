@@ -20,31 +20,31 @@ export default function Hero() {
   const { t, lang } = useLang();
 
   return (
-    <div className={styles.hero}>
+    <div>
       <Container>
-        <div className={styles.container}>
-          <div className={styles.imgcon}>
-            <div className={styles.heroImage}>
+        <div className="relative flex min-h-0 min-h-[100vh] flex-col items-center justify-center gap-6 px-0 pt-19 pb-16 text-center">
+          <div className={` ${styles.imgcon} relative max-[580px]:mt-[0.8rem]`}>
+            <div className="relative h-50 w-50 overflow-hidden rounded-full border-[0.2rem] border-solid border-[var(--primary)]">
               <Image
                 alt="Hero Image"
                 height={240}
                 width={240}
                 src={image}
-                className={styles.image}
+                className="h-full w-full"
                 priority
               />
             </div>
           </div>
-          <div className={styles.data}>
-            <h2 className={styles.name}>{t.hero.name}</h2>
-            <h3 className={styles.jobTitle}>{t.hero.title}</h3>
-            <p className={styles.dis} dir={lang === "en" ? "ltr" : "rtl"}>
+          <div>
+            <h2>{t.hero.name}</h2>
+            <h3>{t.hero.title}</h3>
+            <p className="max-w-200" dir={lang === "en" ? "ltr" : "rtl"}>
               {t.hero.dis}
             </p>
           </div>
-          <div className={styles.links}>
+          <div className="flex items-center justify-between gap-2">
             <Link
-              className={styles.link}
+              className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-2 border-solid after:absolute after:h-full after:w-full after:rounded-full after:bg-[var(--hi-color)] after:opacity-0 after:transition-all after:duration-300 after:content-[''] hover:after:opacity-30"
               target="blank"
               href="https://www.facebook.com/omar.elbastawesy.2025"
               aria-label="facbook account"
@@ -52,7 +52,7 @@ export default function Hero() {
               <FontAwesomeIcon icon={faFacebookF} />
             </Link>
             <Link
-              className={styles.link}
+              className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-2 border-solid after:absolute after:h-full after:w-full after:rounded-full after:bg-[var(--hi-color)] after:opacity-0 after:transition-all after:duration-300 after:content-[''] hover:after:opacity-30"
               target="blank"
               href="https://www.instagram.com/omarelbastawese/"
               aria-label="instagram account"
@@ -60,7 +60,7 @@ export default function Hero() {
               <FontAwesomeIcon icon={faInstagram} />
             </Link>
             <Link
-              className={styles.link}
+              className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-2 border-solid after:absolute after:h-full after:w-full after:rounded-full after:bg-[var(--hi-color)] after:opacity-0 after:transition-all after:duration-300 after:content-[''] hover:after:opacity-30"
               target="blank"
               href="https://www.linkedin.com/in/omar-elbastawesy/"
               aria-label="linkedin account"
@@ -68,7 +68,7 @@ export default function Hero() {
               <FontAwesomeIcon icon={faLinkedinIn} />
             </Link>
             <Link
-              className={styles.link}
+              className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-2 border-solid after:absolute after:h-full after:w-full after:rounded-full after:bg-[var(--hi-color)] after:opacity-0 after:transition-all after:duration-300 after:content-[''] hover:after:opacity-30"
               target="blank"
               href="https://github.com/omarelbastawesy"
               aria-label="github account"
@@ -77,18 +77,18 @@ export default function Hero() {
             </Link>
             <Link
               href="https://wa.me/201090336526"
-              className={styles.link}
+              className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-2 border-solid after:absolute after:h-full after:w-full after:rounded-full after:bg-[var(--hi-color)] after:opacity-0 after:transition-all after:duration-300 after:content-[''] hover:after:opacity-30"
               target="blank"
               aria-label="whatsapp account"
             >
               <FontAwesomeIcon icon={faWhatsapp} />
             </Link>
           </div>
-          <div className={styles.cv}>
+          <div className="flex items-center justify-center gap-2">
             <Link
               href="/cv.pdf"
               download
-              className={styles.download}
+              className="inline-flex cursor-pointer items-center gap-2 rounded border-0 bg-[var(--hi-color)] px-4 py-2 text-[length:var(--fs-sm)] font-medium !text-[var(--white)] uppercase hover:bg-[var(--hi-color-h)]"
               aria-label="download CV"
               dir={lang === "en" ? "ltr" : "rtl"}
             >
@@ -97,7 +97,7 @@ export default function Hero() {
             <Link
               href="/cv.pdf"
               target="_blank"
-              className={styles.view}
+              className="inline-flex cursor-pointer items-center gap-2 rounded border-0 bg-[var(--primary)] px-4 py-2 text-[length:var(--fs-sm)] font-medium !text-[var(--white)] uppercase hover:bg-[var(--primary-soft-h)]"
               aria-label="view CV"
               dir={lang === "en" ? "ltr" : "rtl"}
             >

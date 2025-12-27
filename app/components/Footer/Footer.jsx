@@ -1,4 +1,3 @@
-import styles from "./Footer.module.css";
 import Container from "../Global/container/Container";
 import Link from "next/link";
 import { useLang } from "@/app/Data/LangContext";
@@ -6,40 +5,42 @@ import { useLang } from "@/app/Data/LangContext";
 export default function Footer() {
   const { t, lang } = useLang();
   return (
-    <div className={styles.footer}>
+    <div >
       <Container>
-        <div className={styles.container}>
+        <div >
           <div
             data-aos="fade-up"
             dir={lang === "en" ? "ltr" : "rtl"}
-            className={styles.top}
+            className="flex items-start justify-between gap-4 py-12"
           >
-            <div className={styles.follow}>
+            <div >
               <h2>{t.footer.heads.follow}</h2>
-              <div className={styles.links}>
+              <div
+                className="flex items-start justify-between flex-col px-2 relative"
+              >
                 <Link
-                  className={styles.link}
+                  className="text-[var(--black)] relative hover:text-[var(--hi-color)] hover:relative after:absolute after:content[''] after:h-0.5 after:w-0 after:bottom-0 after:left-0 after:transition-all after:duration-500 after:bg-[var(--hi-color)] hover:after:w-full"
                   target="blank"
                   href="https://www.facebook.com/omar.elbastawesy.2025"
                 >
                   {t.footer.links.facebook}
                 </Link>
                 <Link
-                  className={styles.link}
+                  className="text-[var(--black)] relative hover:text-[var(--hi-color)] hover:relative after:absolute after:content[''] after:h-0.5 after:w-0 after:bottom-0 after:left-0 after:transition-all after:duration-500 after:bg-[var(--hi-color)] hover:after:w-full"
                   target="blank"
                   href="https://www.instagram.com/omarelbastawese/"
                 >
                   {t.footer.links.instagram}
                 </Link>
                 <Link
-                  className={styles.link}
+                  className="text-[var(--black)] relative hover:text-[var(--hi-color)] hover:relative after:absolute after:content[''] after:h-0.5 after:w-0 after:bottom-0 after:left-0 after:transition-all after:duration-500 after:bg-[var(--hi-color)] hover:after:w-full"
                   target="blank"
                   href="https://www.linkedin.com/in/omar-elbastawesy/"
                 >
                   {t.footer.links.linkedin}
                 </Link>
                 <Link
-                  className={styles.link}
+                  className="text-[var(--black)] relative hover:text-[var(--hi-color)] hover:relative after:absolute after:content[''] after:h-0.5 after:w-0 after:bottom-0 after:left-0 after:transition-all after:duration-500 after:bg-[var(--hi-color)] hover:after:w-full"
                   target="blank"
                   href="https://github.com/omarelbastawesy"
                 >
@@ -47,40 +48,67 @@ export default function Footer() {
                 </Link>
                 <Link
                   href="https://wa.me/201090336526"
-                  className={styles.link}
+                  className="text-[var(--black)] relative hover:text-[var(--hi-color)] hover:relative after:absolute after:content[''] after:h-0.5 after:w-0 after:bottom-0 after:left-0 after:transition-all after:duration-500 after:bg-[var(--hi-color)] hover:after:w-full"
                   target="blank"
                 >
                   {t.footer.links.whatsapp}
                 </Link>
               </div>
             </div>
-            <div className={styles.sections}>
+            <div>
               <h2>{t.footer.heads.sections}</h2>
-              <div className={styles.links}>
-                <Link href="#home" className={styles.link}>
+              <div
+                className="flex items-start justify-between flex-col px-2 relative"
+              >
+                <Link
+                  href="#home"
+                  className="text-[var(--black)] relative hover:text-[var(--hi-color)] hover:relative after:absolute after:content[''] after:h-0.5 after:w-0 after:bottom-0 after:left-0 after:transition-all after:duration-500 after:bg-[var(--hi-color)] hover:after:w-full"
+                >
                   {t.footer.links.home}
                 </Link>
-                <Link href="#about" className={styles.link}>
+                <Link
+                  href="#about"
+                  className="text-[var(--black)] relative hover:text-[var(--hi-color)] hover:relative after:absolute after:content[''] after:h-0.5 after:w-0 after:bottom-0 after:left-0 after:transition-all after:duration-500 after:bg-[var(--hi-color)] hover:after:w-full"
+                >
                   {t.footer.links.about}
                 </Link>
-                <Link href="#skills" className={styles.link}>
+                <Link
+                  href="#skills"
+                  className="text-[var(--black)] relative hover:text-[var(--hi-color)] hover:relative after:absolute after:content[''] after:h-0.5 after:w-0 after:bottom-0 after:left-0 after:transition-all after:duration-500 after:bg-[var(--hi-color)] hover:after:w-full"
+                >
                   {t.footer.links.skills}
                 </Link>
-                <Link href="#projects" className={styles.link}>
+                <Link
+                  href="#projects"
+                  className="text-[var(--black)] relative hover:text-[var(--hi-color)] hover:relative after:absolute after:content[''] after:h-0.5 after:w-0 after:bottom-0 after:left-0 after:transition-all after:duration-500 after:bg-[var(--hi-color)] hover:after:w-full"
+                >
                   {t.footer.links.projects}
                 </Link>
-                <Link href="#contact" className={styles.link}>
+                <Link
+                  href="#contact"
+                  className="text-[var(--black)] relative hover:text-[var(--hi-color)] hover:relative after:absolute after:content[''] after:h-0.5 after:w-0 after:bottom-0 after:left-0 after:transition-all after:duration-500 after:bg-[var(--hi-color)] hover:after:w-full"
+                >
                   {t.footer.links.contact}
                 </Link>
               </div>
             </div>
-            <div className={styles.cv}>
+            <div>
               <h2>{t.footer.heads.cv}</h2>
-              <div className={styles.links}>
-                <Link href="/cv.pdf" download className={styles.download}>
+              <div
+                className="flex items-start justify-between flex-col px-2 relative"
+              >
+                <Link
+                  href="/cv.pdf"
+                  download
+                  className="text-[var(--black)] relative hover:text-[var(--hi-color)] hover:relative after:absolute after:content[''] after:h-0.5 after:w-0 after:bottom-0 after:left-0 after:transition-all after:duration-500 after:bg-[var(--hi-color)] hover:after:w-full"
+                >
                   {t.footer.links.downloadcv}
                 </Link>
-                <Link href="/cv.pdf" target="_blank" className={styles.view}>
+                <Link
+                  href="/cv.pdf"
+                  target="_blank"
+                  className="text-[var(--black)] relative hover:text-[var(--hi-color)] hover:relative after:absolute after:content[''] after:h-0.5 after:w-0 after:bottom-0 after:left-0 after:transition-all after:duration-500 after:bg-[var(--hi-color)] hover:after:w-full"
+                >
                   {t.footer.links.viewcv}
                 </Link>
               </div>
@@ -88,7 +116,10 @@ export default function Footer() {
           </div>
         </div>
       </Container>
-      <div dir={lang === "en" ? "ltr" : "rtl"} className={styles.bottom}>
+      <div
+        dir={lang === "en" ? "ltr" : "rtl"}
+        className="text-center p-4 shadow-[var(--shadow)] bg-[var(--card-bg)]"
+      >
         <p>{t.footer.links.copy}</p>
       </div>
     </div>

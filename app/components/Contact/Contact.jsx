@@ -55,8 +55,14 @@ export default function Contact() {
   return (
     <div className={styles.contact}>
       <Container>
-        <div dir={lang === "en" ? "ltr" : "rtl"} className={styles.container}>
-          <p data-aos="zoom-in" className={styles.head}>
+        <div
+          dir={lang === "en" ? "ltr" : "rtl"}
+          className="flex flex-col items-center justify-between gap-8 py-8"
+        >
+          <p
+            data-aos="zoom-in"
+            className={`${styles.head} text-center max-w-[670px] !text-[length:var(--fs-h3)]`}
+          >
             {t.contact.head}
           </p>
           <form
@@ -64,10 +70,10 @@ export default function Contact() {
             data-aos-anchor-placement="center-bottom"
             onSubmit={handleSubmit}
             method="post"
-            className={styles.form}
+            className="flex items-start justify-between gap-4 flex-col w-full"
           >
-            <div className={styles.data}>
-              <div className={`${styles.dis} ${styles.name}`}>
+            <div className="flex items-start justify-between gap-4 w-full flex-wrap">
+              <div className="flex items-start justify-between flex-col flex-1 min-w-[280px] relative">
                 <label htmlFor="name" className={styles.tag}>
                   {t.contact.nameLabel}
                 </label>
@@ -84,12 +90,12 @@ export default function Contact() {
                 />
                 <p
                   style={{ height: `${errors.name ? "1.5rem" : "0rem"}` }}
-                  className={styles.error}
+                  className="h-0 overflow-hidden !text-[length:var(--fs-sm)] !text-red-600 pl-2.5 transition duration-1000"
                 >
                   {t.contact.nameError}
                 </p>
               </div>
-              <div className={`${styles.dis} ${styles.mail}`}>
+              <div className="flex items-start justify-between flex-col flex-1 min-w-[280px] relative">
                 <label htmlFor="email" className={styles.tag}>
                   {t.contact.emailLabel}
                 </label>
@@ -106,12 +112,12 @@ export default function Contact() {
                 />
                 <p
                   style={{ height: `${errors.email ? "1.5rem" : "0rem"}` }}
-                  className={styles.error}
+                  className="h-0 overflow-hidden !text-[length:var(--fs-sm)] !text-red-600 pl-2.5 transition duration-1000"
                 >
                   {t.contact.emailError}
                 </p>
               </div>
-              <div className={`${styles.dis} ${styles.phone}`}>
+              <div className="flex items-start justify-between flex-col flex-1 min-w-[280px] relative">
                 <label htmlFor="phone" className={styles.tag}>
                   {t.contact.phoneLabel}
                 </label>
@@ -129,38 +135,37 @@ export default function Contact() {
                 />
                 <p
                   style={{ height: `${errors.phone ? "1.5rem" : "0rem"}` }}
-                  className={styles.error}
+                  className="h-0 overflow-hidden !text-[length:var(--fs-sm)] !text-red-600 pl-2.5 transition duration-1000"
                 >
                   {t.contact.phoneError}
                 </p>
               </div>
             </div>
-            <div className={`${styles.dis} ${styles.massage}`}>
+            <div className="flex items-start justify-between flex-col flex-1 min-w-[280px] relative w-full">
               <label htmlFor="message" className={styles.tag}>
                 {t.contact.messageLabel}
               </label>
               <textarea
                 id="message"
                 name="message"
-                className={styles.msg}
+                className="h-80 w-full min-h-12 resize-y rounded bg-[var(--card-bg)] border border-solid border-[var(--border)] shadow-[var(--shadow)] text-[var(--black)] text-[length:var(--fs-h4)] p-4 relative"
                 autoComplete="off"
                 value={form.message}
                 onChange={handleChange}
                 placeholder={t.contact.messagePlaceholder}
               ></textarea>
-              <p className={styles.error}></p>
             </div>
-            <button className={styles.btn} type="submit">
+            <button className={`py-2 px-4 text-[length:var(--fs-h4)] rounded text-[var(--black)] cursor-pointer ${styles.btn}`} type="submit">
               {t.contact.send}
             </button>
           </form>
           <div
             style={{ right: !success ? "-280px" : "1rem" }}
-            className={styles.success}
+            className={`fixed bottom-25 max-w-70 shadow-[var(--shadow)] rounded pt-6 px-4 pb-4 -right-70 z-10 ${styles.success}`}
           >
             <FontAwesomeIcon
               onClick={() => setSuccess(false)}
-              className={styles.x}
+              className={`absolute text-center cursor-pointer top-3 right-4 translate-x-[35%] -translate-y-[25%] ${styles.x}`}
               icon={faX}
               size="sm"
             />

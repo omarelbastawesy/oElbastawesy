@@ -1,12 +1,10 @@
-import styles from "./Logo.module.css";
-
 export default function Logo() {
   return (
     <div className="logo">
       <svg width="32" height="32" viewBox="0 0 80 80">
         <g>
           <path
-            className={styles.design}
+            className="fill-[var(--text-main)] stroke-[var(--text-main)] stroke-6"
             d="M67.25,48.7c-0.04,0-0.07,0-0.11,0c-2.11-0.02-3.94,1.32-4.52,3.34c-3.09,10.87-10.67,17.84-21.93,17.84
 		c-14.73,0-23.63-13.34-23.63-29.89c0-16.68,7.51-29.89,23.35-29.89c11.09,0,18.51,6.97,21.81,16.97c0.71,2.16,2.71,3.56,4.98,3.55
 		c0.01,0-0.95-0.08-0.93-0.08c0.27,0,1.53,0.17,1.78,0.11c1.3-0.31,2.52-1.08,2.2-2.43C66.66,13.05,55.8,3.58,40.83,3.58
@@ -15,12 +13,12 @@ export default function Logo() {
           />
         </g>
         <path
-          className={styles.design}
+          className="fill-[var(--text-main)] stroke-[var(--text-main)] stroke-6"
           d="M55.12,35.28h-36c0,0-1.61,0-2.14,0c-1.95,0-3.54,2.06-3.54,4.6v0c0,2.54,1.58,4.6,3.54,4.6h38.14
 	c1.95,0,3.54-2.06,3.54-4.6v0C58.66,37.34,57.08,35.28,55.12,35.28z"
         />
         <path
-          className={styles.design}
+          className="fill-[var(--text-main)] stroke-[var(--text-main)] stroke-6"
           d="M20.15,28.87c0,0-1.49,6.41,0.68,6.41c2.3,0,2.29,8.99,0,9.2c-2.04,0.18-0.06,7.75-0.06,7.75l-8.97-11.61L20.15,28.87z"
         />
       </svg>
