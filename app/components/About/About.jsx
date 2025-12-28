@@ -1,4 +1,3 @@
-import styles from "./About.module.css";
 import Container from "../Global/container/Container";
 import Link from "next/link";
 import "aos/dist/aos.css";
@@ -51,36 +50,36 @@ export default function About() {
         >
           <h1
             data-aos="fade-up"
-            className={`max-w-112.5 text-center max-[580px]:text-(--fs-h3) ${styles.head}`}
+            className="headAbout max-w-112.5 text-center max-[580px]:text-(--fs-h3)"
           >
             {t.about.head}
           </h1>
-          <div className={styles.summary}>
+          <div>
             <h2
               data-aos="fade-up"
-              className={`relative mb-4 w-fit rounded-lg border border-solid border-white bg-(--hi-color-bg) pr-4 pl-10 text-center before:absolute before:top-1/2 before:left-5 before:h-2.5 before:w-2.5 before:rounded-full before:bg-[#00f7ff] before:content-[''] ${styles.header}`}
+              className="headerAbout relative mb-4 w-fit rounded-lg border border-solid border-white bg-(--hi-color-bg) pr-4 pl-10 text-center before:absolute before:top-1/2 before:left-5 before:h-2.5 before:w-2.5 before:-translate-x-1.25 before:-translate-y-1.25 before:rounded-full before:bg-[#00f7ff] before:shadow-[0_0_5px_#00f7ff,0_0_10px_#00f7ff,0_0_20px_#00f7ff,0_0_40px_#00c6ff] before:content-[''] hover:[text-shadow:0_0_5px_#00f7ff,0_0_10px_#00f7ff,0_0_20px_#00f7ff,0_0_40px_#00f7ff]"
             >
               {t.about.summary.header}
             </h2>
             <p
               data-aos="fade-up"
-              className="py-4 pl-4 leading-10 max-[580px]:py-2 max-[580px]:px-0 max-[580px]:leading-6 max-[580px]:!text-[length:var(--fs-sm)]"
+              className="py-4 pl-4 leading-10 max-[580px]:px-0 max-[580px]:py-2 max-[580px]:!text-[length:var(--fs-sm)] max-[580px]:leading-6"
             >
               {t.about.summary.info}
             </p>
           </div>
-          <div className={`self-start pb-8 ${styles.experiance}`}>
+          <div className="w-full self-start pb-8">
             <h2
               data-aos="fade-up"
-              className={`relative mb-4 w-fit rounded-lg border border-solid border-white bg-(--hi-color-bg) pr-4 pl-10 text-center before:absolute before:top-1/2 before:left-5 before:h-2.5 before:w-2.5 before:rounded-full before:bg-[#00f7ff] before:content-[''] ${styles.header}`}
+              className="headerAbout relative mb-4 w-fit rounded-lg border border-solid border-white bg-(--hi-color-bg) pr-4 pl-10 text-center before:absolute before:top-1/2 before:left-5 before:h-2.5 before:w-2.5 before:-translate-x-1.25 before:-translate-y-1.25 before:rounded-full before:bg-[#00f7ff] before:shadow-[0_0_5px_#00f7ff,0_0_10px_#00f7ff,0_0_20px_#00f7ff,0_0_40px_#00c6ff] before:content-[''] hover:[text-shadow:0_0_5px_#00f7ff,0_0_10px_#00f7ff,0_0_20px_#00f7ff,0_0_40px_#00f7ff]"
             >
               {t.about.experiance.header}
             </h2>
             <div
               data-aos="fade-up"
-              className={`relative pt-4 pb-4 pl-4 before:absolute before:bottom-0 before:left-0 before:h-2.5 before:w-2.5 before:rounded-full before:bg-[#00f7ff] before:transition before:duration-300 before:content-[''] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-(--black) after:content-[''] ${styles.step}`}
+              className="after:content[''] before:content[''] step relative pt-4 pb-4 pl-4 before:absolute before:bottom-0 before:left-0 before:z-1 before:h-2.5 before:w-2.5 before:-translate-x-1/2 before:translate-y-1/2 before:rounded-full before:bg-[#00f7ff] before:shadow-[0_0_5px_#00f7ff,0_0_10px_#00f7ff,0_0_20px_#00f7ff,0_0_40px_#00f6ff] before:transition before:duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-(--black)"
             >
-              <div className={`flex gap-2 ${styles.name}`}>
+              <div className="name flex gap-2">
                 <h4 className="relative w-fit after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-black after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
                   <Link href="/Web Development Challanger.pdf" target="_blank">
                     {t.about.experiance.stepA.name}
@@ -88,13 +87,13 @@ export default function About() {
                 </h4>
                 <p>{t.about.experiance.stepA.date}</p>
               </div>
-              <p className={styles.dis}>{t.about.experiance.stepA.dis}</p>
+              <p className="dis">{t.about.experiance.stepA.dis}</p>
             </div>
             <div
               data-aos="fade-up"
-              className={`after:content[''] before:content[''] relative pt-4 pb-4 pl-4 before:absolute before:bottom-0 before:left-0 before:h-2.5 before:w-2.5 before:rounded-full before:bg-[#00f7ff] before:transition before:duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-(--black) ${styles.step}`}
+              className="after:content[''] before:content[''] step relative pt-4 pb-4 pl-4 before:absolute before:bottom-0 before:left-0 before:z-1 before:h-2.5 before:w-2.5 before:-translate-x-1/2 before:translate-y-1/2 before:rounded-full before:bg-[#00f7ff] before:shadow-[0_0_5px_#00f7ff,0_0_10px_#00f7ff,0_0_20px_#00f7ff,0_0_40px_#00f6ff] before:transition before:duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-(--black)"
             >
-              <div className={`flex gap-2 ${styles.name}`}>
+              <div className="name flex gap-2">
                 <h4 className="relative w-fit after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-black after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
                   <Link href="/responsive web design.png" target="_blank">
                     {t.about.experiance.stepB.name}
@@ -102,56 +101,54 @@ export default function About() {
                 </h4>
                 <p>{t.about.experiance.stepB.date}</p>
               </div>
-              <p className={styles.dis}>{t.about.experiance.stepB.dis}</p>
+              <p className="dis">{t.about.experiance.stepB.dis}</p>
             </div>
             <div
               data-aos="fade-up"
-              className={`after:content[''] before:content[''] relative pt-4 pb-4 pl-4 before:absolute before:bottom-0 before:left-0 before:h-2.5 before:w-2.5 before:rounded-full before:bg-[#00f7ff] before:transition before:duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-(--black) ${styles.step}`}
+              className="after:content[''] before:content[''] step relative pt-4 pb-4 pl-4 before:absolute before:bottom-0 before:left-0 before:z-1 before:h-2.5 before:w-2.5 before:-translate-x-1/2 before:translate-y-1/2 before:rounded-full before:bg-[#00f7ff] before:shadow-[0_0_5px_#00f7ff,0_0_10px_#00f7ff,0_0_20px_#00f7ff,0_0_40px_#00f6ff] before:transition before:duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-(--black)"
             >
-              <div className={`flex gap-2 ${styles.name}`}>
+              <div className="name flex gap-2">
                 <h4 className="relative w-fit after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-black after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
                   <Link
                     href="/JavaScript Algorithms and Data Structures.pdf"
                     target="_blank"
-                    className={styles.view}
                   >
                     {t.about.experiance.stepC.name}
                   </Link>
                 </h4>
                 <p>{t.about.experiance.stepC.date}</p>
               </div>
-              <p className={styles.dis}>{t.about.experiance.stepC.dis}</p>
+              <p className="dis">{t.about.experiance.stepC.dis}</p>
             </div>
             <div
               data-aos="fade-up"
-              className={`after:content[''] before:content[''] relative pt-4 pb-4 pl-4 before:absolute before:bottom-0 before:left-0 before:h-2.5 before:w-2.5 before:rounded-full before:bg-[#00f7ff] before:transition before:duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-(--black) ${styles.step}`}
+              className="after:content[''] before:content[''] step relative pt-4 pb-4 pl-4 before:absolute before:bottom-0 before:left-0 before:z-1 before:h-2.5 before:w-2.5 before:-translate-x-1/2 before:translate-y-1/2 before:rounded-full before:bg-[#00f7ff] before:shadow-[0_0_5px_#00f7ff,0_0_10px_#00f7ff,0_0_20px_#00f7ff,0_0_40px_#00f6ff] before:transition before:duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-(--black)"
             >
-              <div className={`flex gap-2 ${styles.name}`}>
+              <div className="name flex gap-2">
                 <h4 className="relative w-fit after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-black after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
                   <Link
                     href="/learn PHP for beginners Udemy.pdf"
                     target="_blank"
-                    className={styles.view}
                   >
                     {t.about.experiance.stepD.name}
                   </Link>
                 </h4>
                 <p>{t.about.experiance.stepD.date}</p>
               </div>
-              <p className={styles.dis}>{t.about.experiance.stepD.dis}</p>
+              <p className="dis">{t.about.experiance.stepD.dis}</p>
             </div>
           </div>
-          <div className="self-start w-full pb-16">
+          <div className="w-full self-start pb-16">
             <h2
               data-aos="fade-up"
-              className={`relative mb-4 w-fit rounded-lg border border-solid border-white bg-(--hi-color-bg) pr-4 pl-10 text-center before:absolute before:top-1/2 before:left-5 before:h-2.5 before:w-2.5 before:rounded-full before:bg-[#00f7ff] before:content-[''] max-[580px]:m-0 max-[580px]:text-(--fs-h4) ${styles.header}`}
+              className="headerAbout relative mb-4 w-fit rounded-lg border border-solid border-white bg-(--hi-color-bg) pr-4 pl-10 text-center before:absolute before:top-1/2 before:left-5 before:h-2.5 before:w-2.5 before:-translate-x-1.25 before:-translate-y-1.25 before:rounded-full before:bg-[#00f7ff] before:shadow-[0_0_5px_#00f7ff,0_0_10px_#00f7ff,0_0_20px_#00f7ff,0_0_40px_#00c6ff] before:content-[''] hover:[text-shadow:0_0_5px_#00f7ff,0_0_10px_#00f7ff,0_0_20px_#00f7ff,0_0_40px_#00f7ff]"
             >
               {t.about.overview.name}
             </h2>
-            <div className="flex flex-wrap items-center justify-between w-full gap-8 py-4">
+            <div className="flex w-full flex-wrap items-center justify-between gap-8 py-4">
               <div
                 data-aos="fade-up"
-                className={`${styles.card} card flex min-w-2xs flex-auto flex-col items-center justify-center gap-1`}
+                className="card flex min-w-2xs flex-auto flex-col items-center justify-center gap-1"
               >
                 <FontAwesomeIcon size="xl" className="pb-1.5" icon={faCode} />
                 <h3 className="text-(--fs-h2)">
@@ -167,7 +164,7 @@ export default function About() {
               </div>
               <div
                 data-aos="fade-up"
-                className={`${styles.card} card flex min-w-2xs flex-auto flex-col items-center justify-center gap-1`}
+                className="card flex min-w-2xs flex-auto flex-col items-center justify-center gap-1"
               >
                 <FontAwesomeIcon
                   size="xl"
@@ -187,7 +184,7 @@ export default function About() {
               </div>
               <div
                 data-aos="fade-up"
-                className={`${styles.card} card flex min-w-2xs flex-auto flex-col items-center justify-center gap-1`}
+                className="card flex min-w-2xs flex-auto flex-col items-center justify-center gap-1"
               >
                 <FontAwesomeIcon
                   size="xl"
@@ -207,7 +204,7 @@ export default function About() {
               </div>
               <div
                 data-aos="fade-up"
-                className={`${styles.card} card flex min-w-2xs flex-auto flex-col items-center justify-center gap-1`}
+                className="card flex min-w-2xs flex-auto flex-col items-center justify-center gap-1"
               >
                 <FontAwesomeIcon
                   size="xl"

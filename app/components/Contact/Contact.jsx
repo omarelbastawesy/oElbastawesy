@@ -1,4 +1,3 @@
-import styles from "./Contact.module.css";
 import Container from "../Global/container/Container";
 import { useState } from "react";
 import { contactSchema } from "./contactSchema";
@@ -53,7 +52,7 @@ export default function Contact() {
   };
 
   return (
-    <div className={styles.contact}>
+    <div>
       <Container>
         <div
           dir={lang === "en" ? "ltr" : "rtl"}
@@ -61,7 +60,7 @@ export default function Contact() {
         >
           <p
             data-aos="zoom-in"
-            className={`${styles.head} text-center max-w-[670px] !text-[length:var(--fs-h3)]`}
+            className="headContact max-w-[670px] text-center !text-[length:var(--fs-h3)]"
           >
             {t.contact.head}
           </p>
@@ -70,17 +69,17 @@ export default function Contact() {
             data-aos-anchor-placement="center-bottom"
             onSubmit={handleSubmit}
             method="post"
-            className="flex items-start justify-between gap-4 flex-col w-full"
+            className="flex w-full flex-col items-start justify-between gap-4"
           >
-            <div className="flex items-start justify-between gap-4 w-full flex-wrap">
-              <div className="flex items-start justify-between flex-col flex-1 min-w-[280px] relative">
-                <label htmlFor="name" className={styles.tag}>
+            <div className="flex w-full flex-wrap items-start justify-between gap-4">
+              <div className="relative flex min-w-[280px] flex-1 flex-col items-start justify-between">
+                <label htmlFor="name" className="pl-4">
                   {t.contact.nameLabel}
                 </label>
                 <input
                   id="name"
                   name="name"
-                  className={styles.input}
+                  className="relative h-12 w-full rounded-sm border border-solid border-[var(--border)] bg-[var(--card-bg)] px-4 text-[length:var(--fs-h4)] text-[var(--black)] shadow-[var(--shadow)] hover:outline hover:outline-[var(--hi-color-h)] hover:outline-solid focus:outline-2 focus:outline-[var(--hi-color)] focus:outline-solid focus:placeholder:text-transparent"
                   autoComplete="name"
                   type="text"
                   placeholder={t.contact.namePlaceholder}
@@ -90,19 +89,19 @@ export default function Contact() {
                 />
                 <p
                   style={{ height: `${errors.name ? "1.5rem" : "0rem"}` }}
-                  className="h-0 overflow-hidden !text-[length:var(--fs-sm)] !text-red-600 pl-2.5 transition duration-1000"
+                  className="h-0 overflow-hidden pl-2.5 !text-[length:var(--fs-sm)] !text-red-600 transition duration-1000"
                 >
                   {t.contact.nameError}
                 </p>
               </div>
-              <div className="flex items-start justify-between flex-col flex-1 min-w-[280px] relative">
-                <label htmlFor="email" className={styles.tag}>
+              <div className="relative flex min-w-[280px] flex-1 flex-col items-start justify-between">
+                <label htmlFor="email" className="pl-4">
                   {t.contact.emailLabel}
                 </label>
                 <input
                   id="email"
                   name="email"
-                  className={styles.input}
+                  className="relative h-12 w-full rounded-sm border border-solid border-[var(--border)] bg-[var(--card-bg)] px-4 text-[length:var(--fs-h4)] text-[var(--black)] shadow-[var(--shadow)] hover:outline hover:outline-[var(--hi-color-h)] hover:outline-solid focus:outline-2 focus:outline-[var(--hi-color)] focus:outline-solid focus:placeholder:text-transparent"
                   autoComplete="email"
                   type="email"
                   placeholder={t.contact.emailPlaceholder}
@@ -112,19 +111,19 @@ export default function Contact() {
                 />
                 <p
                   style={{ height: `${errors.email ? "1.5rem" : "0rem"}` }}
-                  className="h-0 overflow-hidden !text-[length:var(--fs-sm)] !text-red-600 pl-2.5 transition duration-1000"
+                  className="h-0 overflow-hidden pl-2.5 !text-[length:var(--fs-sm)] !text-red-600 transition duration-1000"
                 >
                   {t.contact.emailError}
                 </p>
               </div>
-              <div className="flex items-start justify-between flex-col flex-1 min-w-[280px] relative">
-                <label htmlFor="phone" className={styles.tag}>
+              <div className="relative flex min-w-[280px] flex-1 flex-col items-start justify-between">
+                <label htmlFor="phone" className="pl-4">
                   {t.contact.phoneLabel}
                 </label>
                 <input
                   id="phone"
                   name="phone"
-                  className={styles.input}
+                  className="relative h-12 w-full rounded-sm border border-solid border-[var(--border)] bg-[var(--card-bg)] px-4 text-[length:var(--fs-h4)] text-[var(--black)] shadow-[var(--shadow)] hover:outline hover:outline-[var(--hi-color-h)] hover:outline-solid focus:outline-2 focus:outline-[var(--hi-color)] focus:outline-solid focus:placeholder:text-transparent"
                   autoComplete="tel"
                   type="tel"
                   placeholder={t.contact.phonePlaceholder}
@@ -135,37 +134,40 @@ export default function Contact() {
                 />
                 <p
                   style={{ height: `${errors.phone ? "1.5rem" : "0rem"}` }}
-                  className="h-0 overflow-hidden !text-[length:var(--fs-sm)] !text-red-600 pl-2.5 transition duration-1000"
+                  className="h-0 overflow-hidden pl-2.5 !text-[length:var(--fs-sm)] !text-red-600 transition duration-1000"
                 >
                   {t.contact.phoneError}
                 </p>
               </div>
             </div>
-            <div className="flex items-start justify-between flex-col flex-1 min-w-[280px] relative w-full">
-              <label htmlFor="message" className={styles.tag}>
+            <div className="relative flex w-full min-w-[280px] flex-1 flex-col items-start justify-between">
+              <label htmlFor="message" className="pl-4">
                 {t.contact.messageLabel}
               </label>
               <textarea
                 id="message"
                 name="message"
-                className="h-80 w-full min-h-12 resize-y rounded bg-[var(--card-bg)] border border-solid border-[var(--border)] shadow-[var(--shadow)] text-[var(--black)] text-[length:var(--fs-h4)] p-4 relative"
+                className="relative h-80 min-h-12 w-full resize-y rounded border border-solid border-[var(--border)] bg-[var(--card-bg)] p-4 text-[length:var(--fs-h4)] text-[var(--black)] shadow-[var(--shadow)] hover:outline-1 hover:outline-[var(--hi-color-h)] hover:outline-solid focus:bg-[var(--card-bg-h)] focus:outline-2 focus:outline-[var(--hi-color)] focus:outline-solid focus:placeholder:text-transparent"
                 autoComplete="off"
                 value={form.message}
                 onChange={handleChange}
                 placeholder={t.contact.messagePlaceholder}
               ></textarea>
             </div>
-            <button className={`py-2 px-4 text-[length:var(--fs-h4)] rounded text-[var(--black)] cursor-pointer ${styles.btn}`} type="submit">
+            <button
+              className="cursor-pointer rounded border-[var(--border)] bg-[var(--hi-color)] px-4 py-2 text-[length:var(--fs-h4)] text-[var(--black)] hover:bg-[var(--hi-color-h)]"
+              type="submit"
+            >
               {t.contact.send}
             </button>
           </form>
           <div
             style={{ right: !success ? "-280px" : "1rem" }}
-            className={`fixed bottom-25 max-w-70 shadow-[var(--shadow)] rounded pt-6 px-4 pb-4 -right-70 z-10 ${styles.success}`}
+            className="fixed -right-70 bottom-25 z-10 max-w-70 rounded px-4 pt-6 pb-4 shadow-[var(--shadow)]"
           >
             <FontAwesomeIcon
               onClick={() => setSuccess(false)}
-              className={`absolute text-center cursor-pointer top-3 right-4 translate-x-[35%] -translate-y-[25%] ${styles.x}`}
+              className="absolute top-3 right-4 translate-x-[35%] -translate-y-[25%] cursor-pointer border border-solid border-[var(--border)] bg-[var(--card-bg)] text-center"
               icon={faX}
               size="sm"
             />

@@ -1,8 +1,0 @@
-.head:hover .header {
-  color:  var(--white);
-}
-@media (max-width: 580px) {
-  .header {
-    font-size: var(--fs-h3);
-  }
-}

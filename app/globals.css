@@ -200,6 +200,110 @@ code {
   opacity: 0.75;
 }
 
+/* -----------------------------
+   Hero Component
+   ----------------------------- */
+.imgcon::after {
+  content: "\f0a3";
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  color: var(--hi-color);
+  left: 50%;
+  height: 20px;
+  width: 20px;
+  bottom: 4px;
+  transform: translate(-10px, 4px);
+  position: absolute;
+  z-index: 10;
+}
+
+
+/* -----------------------------
+   Head Component
+   ----------------------------- */
+.head:hover .header {
+  color: var(--white);
+}
+@media (max-width: 580px) {
+  .header {
+    font-size: var(--fs-h3);
+  }
+}
+
+
+/* -----------------------------
+   Contact Component
+   ----------------------------- */
+.headContact {
+  background: var(--gradiant);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+/* -----------------------------
+   About Component
+   ----------------------------- */
+.headAbout {
+  background: var(--gradiant);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.step::before {
+  animation: animate 4s ease-in-out infinite;
+}
+
+.name h4 {
+  background: linear-gradient(325deg, rgb(255, 38, 0), rgb(9, 156, 214));
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.name h4::after {
+  background: var(--gradiant);
+}
+
+/* Responsive Design */
+
+@media (max-width: 580px) {
+  .headAbout {
+    font-size: var(--fs-h3);
+  }
+  .headerAbout {
+    font-size: var(--fs-h4);
+    margin: 0;
+  }
+
+  .step {
+    padding: 0.5rem 0;
+  }
+  .name {
+    margin-top: 1rem;
+    flex-direction: column;
+    line-height: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .name,
+  .name p {
+    font-size: var(--fs-lead);
+  }
+  .step .dis {
+    font-size: var(--fs-sm);
+    line-height: 1.3rem;
+  }
+
+  .step h4 a {
+    display: block;
+    min-height: 21px;
+  }
+
+  .step::before {
+    animation: move 2s ease-in-out infinite;
+  }
+}
+
 /* Animation / */
 
 @keyframes move {
@@ -211,6 +315,15 @@ code {
   }
   100% {
     transform: translateY(4px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    left: 0%;
+  }
+  50% {
+    left: 100%;
   }
 }
 

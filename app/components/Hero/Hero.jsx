@@ -1,6 +1,5 @@
 "use client";
 
-import styles from "./Hero.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -23,7 +22,7 @@ export default function Hero() {
     <div>
       <Container>
         <div className="relative flex min-h-0 min-h-[100vh] flex-col items-center justify-center gap-6 px-0 pt-19 pb-16 text-center">
-          <div className={` ${styles.imgcon} relative max-[580px]:mt-[0.8rem]`}>
+          <div className="imgcon relative max-[580px]:mt-[0.8rem]">
             <div className="relative h-50 w-50 overflow-hidden rounded-full border-[0.2rem] border-solid border-[var(--primary)]">
               <Image
                 alt="Hero Image"
