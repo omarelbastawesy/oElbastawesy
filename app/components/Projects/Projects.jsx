@@ -23,7 +23,7 @@ export default function Projects() {
   return (
     <div>
       <Container>
-        <div className="flex flex-col items-center justify-between gap-8 py-8 ">
+        <div className="flex flex-col items-center justify-between gap-8 py-8">
           <div
             data-aos="fade-up"
             className="flex items-center justify-between gap-4 max-[580px]:grid max-[580px]:grid-cols-[repeat(2,auto)] max-[580px]:justify-center max-[580px]:gap-4 max-[580px]:text-center"
@@ -58,38 +58,40 @@ export default function Projects() {
               return (
                 <div
                   key={ele.name}
-                  className="max-[635]:max-w-full hover:bg-[var(--card-bg-h)] group flex min-h-100 max-w-1/2 min-w-70 flex-1 flex-col justify-between self-start rounded-lg border border-solid border-[var(--border)] bg-[var(--card-bg)] px-6 py-4 shadow-[var(--shadow)]"
+                  className="group flex min-h-100 max-w-1/2 min-w-70 flex-1 flex-col justify-between self-start rounded-lg border border-solid border-[var(--border)] bg-[var(--card-bg)] px-6 py-4 shadow-[var(--shadow)] hover:bg-[var(--card-bg-h)] max-[635]:max-w-full"
                   data-aos="flip-left"
                 >
-                  <div className="relative w-full overflow-hidden rounded-lg h-50">
+                  <div className="relative h-50 w-full overflow-hidden rounded-lg">
                     <Image
                       src={ele.bg}
                       fill
-                      className="object-cover object-center w-full h-full scale-100 rotate-0 group-hover:rotate-4 group-hover:scale-120"
+                      className="h-full w-full scale-100 rotate-0 object-cover object-center group-hover:scale-120 group-hover:rotate-4"
                       sizes="(max-width: 768px) 100vw, 50vw"
                       alt="image of project"
                     />
                   </div>
-                  <div className="flex flex-col self-start justify-between w-full gap-2">
+                  <div className="flex w-full flex-col justify-between gap-2 self-start">
                     <h3>{ele.name}</h3>
                     <p
-                      dir={lang === "en" ? "ltr" : "rtl"}
+                      dir={lang === "ar" ? "rtl" : "ltr"}
                       className="text-[length:var(--fs-lead)]"
                     >
-                      {lang === "en" ? ele.dis.en : ele.dis.ar}
+                      {(lang === "en" && ele.dis.en) ||
+                        (lang === "ar" && ele.dis.ar) ||
+                        (lang === "fr" && ele.dis.fr)}
                     </p>
                     <div className="flex items-center gap-4 text-[0.9rem]">
                       <Link
                         target="_blank"
                         href={ele.live}
-                        className="bg-[var(--hi-color)] border border-solid border-[var(--border)] py-[0.1rem] px-[0.9rem] rounded-sm !text-[var(--white)] font-semibold h-11 flex items-center"
+                        className="flex h-11 items-center rounded-sm border border-solid border-[var(--border)] bg-[var(--hi-color)] px-[0.9rem] py-[0.1rem] font-semibold !text-[var(--white)]"
                       >
                         LIVE DEMO
                       </Link>
                       <Link
                         target="_blank"
                         href={ele.repo}
-                        className="bg-[var(--primary)] border border-solid border-[var(--border)] py-[0.1rem] px-[0.9rem] rounded-sm !text-[var(--white)] font-semibold h-11 flex items-center"
+                        className="flex h-11 items-center rounded-sm border border-solid border-[var(--border)] bg-[var(--primary)] px-[0.9rem] py-[0.1rem] font-semibold !text-[var(--white)]"
                       >
                         GITHUB
                       </Link>

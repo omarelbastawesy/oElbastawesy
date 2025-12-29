@@ -55,7 +55,7 @@ export default function Contact() {
     <div>
       <Container>
         <div
-          dir={lang === "en" ? "ltr" : "rtl"}
+          dir={lang === "ar" ? "rtl" : "ltr"}
           className="flex flex-col items-center justify-between gap-8 py-8"
         >
           <p
@@ -130,7 +130,7 @@ export default function Contact() {
                   value={form.phone}
                   onChange={handleChange}
                   required
-                  dir={lang === "en" ? "ltr" : "rtl"}
+                  dir={lang === "ar" ? "rtl" : "ltr"}
                 />
                 <p
                   style={{ height: `${errors.phone ? "1.5rem" : "0rem"}` }}

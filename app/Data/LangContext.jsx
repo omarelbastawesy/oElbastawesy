@@ -3,6 +3,7 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import en from "./data//En.json";
 import ar from "./data/Ar.json";
+import fr from "./data/Fr.json";
 
 const LangContext = createContext();
 
@@ -14,7 +15,14 @@ export function LangProvider({ children }) {
     if (saved) setLang(saved);
   }, []);
 
-  const t = lang === "ar" ? ar : en;
+  let t;
+  if (lang === "en") {
+    t = en;
+  } else if (lang === "ar") {
+    t = ar;
+  } else if (lang === "fr") {
+    t = fr;
+  }
 
   const changeLang = (newLang) => {
     setLang(newLang);

@@ -37,7 +37,7 @@ export default function Hero() {
           <div>
             <h2>{t.hero.name}</h2>
             <h3>{t.hero.title}</h3>
-            <p className="max-w-200" dir={lang === "en" ? "ltr" : "rtl"}>
+            <p className="max-w-200" dir={lang === "ar" ? "rtl" : "ltr"}>
               {t.hero.dis}
             </p>
           </div>
@@ -89,7 +89,7 @@ export default function Hero() {
               download
               className="inline-flex cursor-pointer items-center gap-2 rounded border-0 bg-[var(--hi-color)] px-4 py-2 text-[length:var(--fs-sm)] font-medium !text-[var(--white)] uppercase hover:bg-[var(--hi-color-h)]"
               aria-label="download CV"
-              dir={lang === "en" ? "ltr" : "rtl"}
+              dir={lang === "ar" ? "rtl" : "ltr"}
             >
               {t.hero.dcv}
             </Link>
@@ -98,7 +98,7 @@ export default function Hero() {
               target="_blank"
               className="inline-flex cursor-pointer items-center gap-2 rounded border-0 bg-[var(--primary)] px-4 py-2 text-[length:var(--fs-sm)] font-medium !text-[var(--white)] uppercase hover:bg-[var(--primary-soft-h)]"
               aria-label="view CV"
-              dir={lang === "en" ? "ltr" : "rtl"}
+              dir={lang === "ar" ? "rtl" : "ltr"}
             >
               {t.hero.vcv}
             </Link>

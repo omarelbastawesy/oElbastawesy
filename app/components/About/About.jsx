@@ -45,7 +45,7 @@ export default function About() {
     <div className="w-full">
       <Container>
         <div
-          dir={lang === "en" ? "ltr" : "rtl"}
+          dir={lang === "ar" ? "rtl" : "ltr"}
           className="flex flex-col items-center justify-between gap-4"
         >
           <h1
