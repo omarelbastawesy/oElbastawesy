@@ -26,7 +26,6 @@ export default function ThemeToggle() {
 
   return (
     <FontAwesomeIcon
-    
       onClick={toggleTheme}
       icon={theme == "light" ? faMoon : faSun}
       size="sm"
